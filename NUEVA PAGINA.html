@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blackwider- Streamer Gamer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    body {
+      background: url('https://images.hdqwalls.com/wallpapers/call-of-duty-mobile-mythic-ghost-eternal-siege-game-zw.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Intro animado glitch */
+    #intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: #000;
+      color: red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      text-shadow: 0 0 10px red, 0 0 20px #ff0000;
+      animation: glitch 1s infinite, fadeOut 2s ease-in-out 3s forwards;
+      z-index: 10;
+    }
+
+    @keyframes glitch {
+      0%, 100% { transform: skew(0deg); }
+      20% { transform: skew(5deg); }
+      40% { transform: skew(-5deg); }
+      60% { transform: skew(3deg); }
+      80% { transform: skew(-3deg); }
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    header, .content, footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      margin: 1rem;
+      border-radius: 15px;
+      box-shadow: 0 0 15px red;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      color: red;
+      font-size: 2.8rem;
+      text-shadow: 0 0 10px red;
+    }
+
+    nav {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      background: red;
+      border-radius: 5px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px red;
+    }
+
+    nav a:hover {
+      background: darkred;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px red;
+    }
+
+    .content {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .content h2 {
+      color: red;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px red;
+    }
+
+    .btn-whatsapp {
+      display: inline-block;
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      margin-top: 2rem;
+      transition: 0.3s;
+      box-shadow: 0 0 10px red;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: darkred;
+      box-shadow: 0 0 20px red;
+    }
+
+    .stream-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 15px red;
+    }
+
+    .stream-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .redes {
+      margin-top: 1rem;
+    }
+
+    .redes img {
+      width: 30px;
+      margin: 0 10px;
+      filter: drop-shadow(0 0 5px red);
+      transition: 0.3s;
+    }
+
+    .redes img:hover {
+      transform: scale(1.2);
+      filter: drop-shadow(0 0 10px red);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Intro animado -->
+  <div id="intro">
+    ⚡ BIENVENIDO AL STREAM 🔥
+  </div>
+
+  <!-- Encabezado -->
+  <header>
+    <h1>Blackwider</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#stream">Stream</a>
+      <a href="#sobre">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Sección Inicio -->
+  <section class="content" id="inicio" data-aos="fade-up">
+    <h2>¡Hola! Soy Blackwider</h2>
+    <p>Transmisiones diarias de alta adrenalina. Juegos, estrategia y acción constante. Únete a la comunidad gamer.</p>
+    <a href="https://wa.me/1234567890" class="btn-whatsapp" target="_blank">¡Contáctame por WhatsApp!</a>
+  </section>
+
+  
+
+  <!-- Sección Sobre mí -->
+  <section class="content" id="sobre" data-aos="fade-up">
+    <h2>Sobre mí</h2>
+    <p>Streamer competitivo enfocado en shooter y battle royale. Transmitiendo con estilo y pasión todos los días 🔫</p>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section class="content" id="contacto" data-aos="fade-up">
+    <h2>Contacto</h2>
+    <p>Para colaboraciones o redes sociales, escríbeme por WhatsApp o Twitch.</p>
+    <div class="redes">
+      <a href="https://www.twitch.tv/Blackwider" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/twitch.png" alt="Twitch">
+      </a>
+      <a href="https://wa.me/1234567890" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
+      </a>
+    </div>
+  </section>
+
+  <!-- Sección Stream -->
+  <section class="content" id="stream" data-aos="zoom-in">
+    <h2>🎮 EN VIVO AHORA</h2>
+    <div class="stream-container">
+      <iframe
+        src="https://player.twitch.tv/?channel=Blackwider&parent=localhost"
+        allowfullscreen="true">
+      </iframe>
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Blackwider| Todos los derechos reservados.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
